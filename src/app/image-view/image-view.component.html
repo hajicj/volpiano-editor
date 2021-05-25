@@ -1,0 +1,12 @@
+<div>
+  <div>
+    Paste image URL here:
+    <input #imageURLInput name="imageURLinput">
+    <button (click)="loadImageFromURL()">Load image</button>
+  <div class="imageCanvas">
+    <div #imageContainer class="imageContainer">
+      <img #image title="image"
+           src="{{ imageURL}}"/>
+    </div>
+  </div>
+</div>

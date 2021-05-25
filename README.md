@@ -1,5 +1,7 @@
 # VolpianoEditor
 
+The Volpiano Editor is a lightweight web app for transcribing chant to volpiano. You can upload an image that you want to transcribe. Then you write the Volpiano string in the text area.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
 
 ## Development server

@@ -1,0 +1,9 @@
+div.imageCanvas {
+  border: 1px solid;
+  width: 80%;
+  height: 400px;
+}
+
+img#image {
+  border: 3px solid red;
+}

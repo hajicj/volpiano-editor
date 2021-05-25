@@ -1,0 +1,11 @@
+
+<div #editor>
+  <hr/>
+  <app-volpiano-renderer
+    volpiano="{{volpiano}}">
+  </app-volpiano-renderer>
+  <div #text>
+    <textarea #textInput
+      [value]="volpiano" (input)="updateVolpiano()"></textarea>
+  </div>
+</div>
