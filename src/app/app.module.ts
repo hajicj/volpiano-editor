@@ -6,13 +6,16 @@ import { EditorComponent } from './editor/editor.component';
 import { FormsModule } from '@angular/forms';
 import { VolpianoRendererComponent } from './editor/volpiano-renderer/volpiano-renderer.component';
 import { ImageViewComponent } from './image-view/image-view.component';
+import { ZoomableCanvasComponent } from './image-view/zoomable-canvas/zoomable-canvas.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     EditorComponent,
     VolpianoRendererComponent,
-    ImageViewComponent
+    ImageViewComponent,
+    ZoomableCanvasComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,10 +3,29 @@
     Paste image URL here:
     <input #imageURLInput name="imageURLinput">
     <button (click)="loadImageFromURL()">Load image</button>
+  </div>
+  <div class="imageControls">
+    <input type="range" min="{{ minZoom }}" step="0.05" max="{{ maxZoom }}"
+           [(ngModel)]="zoomLevel"><br />
+    <b>Zoom Level:</b> {{ zoomLevel }}<br />
+    <b>Center:</b> ({{ centerX }}, {{ centerY }})<br />
+    <b>Canvas dimensions:</b> {{  canvasWidth }} x {{ canvasHeight }}<br />
+    <b>Image bounds:</b> ({{ left }}; {{ top }}; {{ right }}; {{ bottom }})
+  </div>
   <div class="imageCanvas">
-    <div #imageContainer class="imageContainer">
-      <img #image title="image"
-           src="{{ imageURL}}"/>
+<!--    <div #imageContainer class="imageContainer">-->
+<!--      <img #image title="image" height="0px" width="0px"-->
+<!--           src="{{ imageURL}}"/>-->
+<!--    </div>-->
+    <div class="canvasContainer">
+      <zoomable-canvas
+        [image]="imageElement"
+        (topChange)="top = $event" (bottomChange)="bottom = $event"
+        (leftChange)="left = $event" (rightChange)="right = $event"
+        [(centerX)]="centerX" [(centerY)]="centerY"
+        [(zoomLevel)]="zoomLevel" [maxZoom]="maxZoom" [minZoom]="minZoom"
+        (canvasWidthChange)="setCanvasWidth($event)" (canvasHeightChange)="setCanvasHeight($event)"
+      ></zoomable-canvas>
     </div>
   </div>
 </div>

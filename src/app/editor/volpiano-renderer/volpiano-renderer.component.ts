@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Volpiano} from '../../volpiano';
 
 @Component({
   selector: 'app-volpiano-renderer',
@@ -7,7 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class VolpianoRendererComponent implements OnInit {
 
-  @Input() volpiano: string;
+  @Input() volpiano: Volpiano;
+  @Input() text: string;
 
   constructor() { }
 

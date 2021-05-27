@@ -1,11 +1,28 @@
 
 <div #editor>
   <hr/>
+<!--  <h3>Result</h3>-->
   <app-volpiano-renderer
-    volpiano="{{volpiano}}">
+    [volpiano]="volpiano"
+    [text]="fulltext">
   </app-volpiano-renderer>
-  <div #text>
-    <textarea #textInput
-      [value]="volpiano" (input)="updateVolpiano()"></textarea>
+
+<!--  <h3>Inputs</h3>-->
+  <div #volpianoInputContainer>
+    <span>Volpiano:&nbsp;</span>
+    <textarea #volpianoInput
+      [value]="volpiano.volpianoString" (input)="updateVolpiano()"></textarea>
+  </div>
+
+  <div #fulltextInputContainer>
+    <span>Fulltext:&nbsp;</span>
+    <textarea #fulltextInput
+              [value]="fulltext" (input)="updateFulltext()"></textarea>
+  </div>
+
+  <div #validation>
+    Text syllables: {{ textSyllablesCount }}
+    <br/>
+    Volpiano syllables: {{ volpianoSyllablesCount }}
   </div>
 </div>
