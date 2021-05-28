@@ -1,3 +1,11 @@
 <div #preview class="preview">
   {{ volpiano.volpianoString }}
 </div>
+
+<div class="chant">
+  <div *ngFor="let word of wordData" class="word">
+    <div *ngFor="let syllable of word">
+
+    </div>
+  </div>
+</div>

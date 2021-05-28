@@ -16,4 +16,8 @@ export class VolpianoRendererComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get wordData(): Array<[string, string]> { return []; }
+
+
+
 }
