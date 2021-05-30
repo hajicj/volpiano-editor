@@ -46,7 +46,7 @@ export class ChantData {
 
   buildChantWordsAndSyllables(
     strictSyllabization: boolean = false):
-    Array<Array<(Volpiano | string)>>
+    Array<[Volpiano, string]>
   {
     // Take the chant data and build Chant Word and Chant Syllable hierarchy.
     // The core effort is to align volpiano and text words/syllables. This is
@@ -70,7 +70,7 @@ export class ChantData {
 
     const textWords = this.textWords;
 
-    let cWords: Array<Array<[string, string]>> = [];
+    let cWords: Array<[Volpiano, string]> = [];
 
     let tIdx = 0;
     for (let vIdx = 0; vIdx < volpianoWords.length; vIdx++) {
@@ -80,7 +80,7 @@ export class ChantData {
         tWord = textWords[tIdx];
         tIdx++;
       }
-      const cWord = [new Volpiano(vWord), tWord];
+      const cWord: [Volpiano, string] = [new Volpiano(vWord), tWord];
 
       // Syllabization
       if (ChantData.isTextSyllabized(tWord)) {
@@ -91,10 +91,13 @@ export class ChantData {
            'tSyllables=' + tSyllables.toString() + ' vSyllables=' + vSyllables.toString());
         }
         // There can be a mismatch: more volpiano syls. vs more text syls, either way.
-        // When we run out of volpiano, we ignore all remaining text syllables. When we run out of text, we add empty text to volpiano.
+        // When we run out of volpiano, we ignore all remaining text syllables.
+        // When we run out of text, we add empty text to volpiano.
+
+      } else {
+        // No syllabization
       }
 
-      // No syllabization
 
       cWords.push(cWord);
     }

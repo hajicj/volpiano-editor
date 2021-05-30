@@ -1,7 +1,12 @@
 div.imageCanvas {
-  border: 1px solid;
+  border: 1px solid darkblue;
   width: 80%;
   height: 400px;
+  overflow: hidden;
+}
+
+div.canvasContainer {
+  border: 1px solid deepskyblue;
 }
 
 img#image {
