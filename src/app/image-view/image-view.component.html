@@ -1,13 +1,13 @@
 <div>
   <div>
-    Paste image URL here:
-    <input #imageURLInput name="imageURLinput">
     <button (click)="loadImageFromURL()">Load image</button>
+    <input #imageURLInput name="imageURLinput" class="imageURLinput"
+           placeholder="Paste image URL here">
   </div>
   <div class="imageControls">
-    <input type="range" min="{{ minZoom }}" step="0.05" max="{{ maxZoom }}"
+    <b>Zoom:</b><input type="range" min="{{ minZoom }}" step="0.05" max="{{ maxZoom }}"
            [(ngModel)]="zoomLevel"><br />
-    <b>Zoom Level:</b> {{ zoomLevel }}<br />
+<!--    <b>Zoom Level:</b> {{ zoomLevel }}<br />-->
 <!--    <b>Center:</b> ({{ centerX }}, {{ centerY }})<br />-->
 <!--    <b>Canvas dimensions:</b> {{  canvasWidth }} x {{ canvasHeight }}<br />-->
 <!--    <b>Image bounds:</b> ({{ left }}; {{ top }}; {{ right }}; {{ bottom }})-->

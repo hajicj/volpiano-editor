@@ -2,7 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {find} from 'rxjs/operators';
 
-import { Volpiano } from '../volpiano';
+import { Volpiano } from '../data-structures/volpiano';
 
 @Component({
   selector: 'app-editor',
@@ -11,8 +11,8 @@ import { Volpiano } from '../volpiano';
 })
 export class EditorComponent implements OnInit {
 
-  public volpiano: Volpiano = new Volpiano('1---');
-  public fulltext: string = '';
+  public volpiano: Volpiano = new Volpiano('1---f---g---f--gh-j--j-h');
+  public fulltext: string = 'Ad te cla-ma-vi';
 
   @ViewChild('volpianoInput', {static: false}) volpianoInput: ElementRef;
   @ViewChild('fulltextInput', {static: false}) fulltextInput: ElementRef;

@@ -46,7 +46,12 @@ export class Volpiano {
 
   allWords(): Array<string> {
     if (this.volpianoString === "") { return []; }
-    return this.volpianoString.split(Volpiano.VOLPIANO_WORD_SEPARATOR);
+    const vWords = this.volpianoString.split(Volpiano.VOLPIANO_WORD_SEPARATOR);
+    if (vWords[vWords.length - 1].length <= 0) {
+      return vWords.slice(0, -1);
+    } else {
+      return vWords;
+    }
   }
 
   musicWords(): Array<string> {
@@ -104,6 +109,9 @@ export class Volpiano {
     // a word that does contain music will not have text underlay. For now, however,
     // we just check whether the given vWord contains some music (base notes).
     return Volpiano.containsMusic(vWord);
+  }
+  static shouldHaveTextSyllable(vSyl: string) {
+    return Volpiano.containsMusic(vSyl);
   }
 
   static isAlphabetVolpiano(str: string) {

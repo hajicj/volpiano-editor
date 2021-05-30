@@ -1,4 +1,32 @@
-.preview {
+/*.preview {*/
+/*  font-family: Volpiano, sans-serif;*/
+/*  font-size: 32pt;*/
+/*}*/
+
+.word {
+  display: inline-block;
+}
+
+.syllable {
+  display: inline-block;
+}
+
+.wordVolpiano {
   font-family: Volpiano, sans-serif;
   font-size: 32pt;
+  display: inline-block;
+}
+
+.wordText {
+  /*display: inline-block;*/
+}
+
+.syllableVolpiano {
+  font-family: Volpiano, sans-serif;
+  font-size: 32pt;
+  display: inline-block
+}
+
+.syllableText {
+  /*display: inline-block;*/
 }

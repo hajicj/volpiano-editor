@@ -21,8 +21,8 @@ export class ImageViewComponent implements OnInit, AfterViewInit {
   public centerX: number;
   public centerY: number;
   public zoomLevel: number = 0.0;
-  public maxZoom: number = 1.0;
-  public minZoom: number = -2.0;
+  public maxZoom: number = 5.0;
+  public minZoom: number = -5.0;
   public canvasWidth: number;
   public canvasHeight: number;
 

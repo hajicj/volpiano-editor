@@ -1,11 +1,29 @@
-<div #preview class="preview">
-  {{ volpiano.volpianoString }}
-</div>
+<!--<div #preview class="preview">-->
+<!--  {{ volpiano.volpianoString }}-->
+<!--</div>-->
+
+<!--<div class="chant">-->
+<!--  <div *ngFor="let word of alignedWords; let last = last;" class="word">-->
+<!--    <div class="wordVolpiano">-->
+<!--      {{ word[0].volpianoString }}<ng-container *ngIf="!last">-&#45;&#45;</ng-container>-->
+<!--    </div>-->
+<!--    <div class="wordText">-->
+<!--      {{ word[1] }}-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
 
 <div class="chant">
-  <div *ngFor="let word of wordData" class="word">
-    <div *ngFor="let syllable of word">
-
+  <div *ngFor="let word of alignedWordsAndSyllables; let wLast = last;" class="word">
+    <div *ngFor="let syllable of word; let sLast = last;" class="syllable">
+      <div class="syllableVolpiano">
+        {{ syllable[0].volpianoString }}<ng-container
+        *ngIf="!sLast">--</ng-container><ng-container *ngIf="sLast && !wLast">---</ng-container>
+      </div>
+      <div class="syllableText">
+        {{ syllable[1] }}<ng-container *ngIf="!sLast">-</ng-container>
+      </div>
     </div>
   </div>
 </div>

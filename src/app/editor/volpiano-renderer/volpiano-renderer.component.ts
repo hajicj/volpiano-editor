@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Volpiano} from '../../volpiano';
+import {Volpiano} from '../../data-structures/volpiano';
+import {ChantData} from '../../data-structures/chant';
 
 @Component({
   selector: 'app-volpiano-renderer',
@@ -16,8 +17,13 @@ export class VolpianoRendererComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get wordData(): Array<[string, string]> { return []; }
+  get alignedWords(): Array<[Volpiano, string]> {
+    return ChantData.alignVolpianoAndTextWords(this.volpiano, this.text);
+  }
 
-
+  get alignedWordsAndSyllables(): Array<Array<[Volpiano, string]>> {
+    return ChantData.alignVolpianoAndTextWordsAndSyllables(
+      this.volpiano, this.text, false);
+  }
 
 }

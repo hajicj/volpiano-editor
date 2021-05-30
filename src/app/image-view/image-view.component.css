@@ -12,3 +12,7 @@ div.canvasContainer {
 img#image {
   border: 3px solid red;
 }
+
+input.imageURLinput {
+  width: 50%;
+}
