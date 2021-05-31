@@ -5,7 +5,7 @@
            placeholder="Paste image URL here">
   </div>
   <div class="imageControls">
-    <b>Zoom:</b><input type="range" min="{{ minZoom }}" step="0.05" max="{{ maxZoom }}"
+    <span class="imageControlsLabel">Zoom</span><input class="imageControls" type="range" min="{{ minZoom }}" step="0.05" max="{{ maxZoom }}"
            [(ngModel)]="zoomLevel"><br />
 <!--    <b>Zoom Level:</b> {{ zoomLevel }}<br />-->
 <!--    <b>Center:</b> ({{ centerX }}, {{ centerY }})<br />-->

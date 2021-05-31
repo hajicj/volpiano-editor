@@ -12,7 +12,7 @@ import { Volpiano } from '../data-structures/volpiano';
 export class EditorComponent implements OnInit {
 
   public volpiano: Volpiano = new Volpiano('1---f---g---f--gh-j--j-h');
-  public fulltext: string = 'Ad te cla-ma-vi';
+  public fulltext: string = 'Ad te le-va-vi';
 
   @ViewChild('volpianoInput', {static: false}) volpianoInput: ElementRef;
   @ViewChild('fulltextInput', {static: false}) fulltextInput: ElementRef;

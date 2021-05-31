@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, QueryList, ViewChildren} from '@angular/core';
 import {Volpiano} from '../../data-structures/volpiano';
 import {ChantData} from '../../data-structures/chant';
+import {SyllableViewComponent} from '../syllable-view/syllable-view.component';
 
 @Component({
   selector: 'app-word-view',
@@ -11,6 +12,8 @@ export class WordViewComponent implements OnInit {
 
   @Input() chantWord: Array<[Volpiano, string]>;
   @Input() isLastWord: boolean;
+
+  @ViewChildren(SyllableViewComponent) syllableViews: QueryList<SyllableViewComponent>;
 
   get volpiano(): Volpiano {
     const vSyls = this.chantWord.map(chantSyl => chantSyl[0].volpianoString);
