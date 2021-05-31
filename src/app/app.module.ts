@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { VolpianoRendererComponent } from './editor/volpiano-renderer/volpiano-renderer.component';
 import { ImageViewComponent } from './image-view/image-view.component';
 import { ZoomableCanvasComponent } from './image-view/zoomable-canvas/zoomable-canvas.component';
+import { WordViewComponent } from './views/word-view/word-view.component';
+import { SyllableViewComponent } from './views/syllable-view/syllable-view.component';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { ZoomableCanvasComponent } from './image-view/zoomable-canvas/zoomable-c
     VolpianoRendererComponent,
     ImageViewComponent,
     ZoomableCanvasComponent,
+    WordViewComponent,
+    SyllableViewComponent,
   ],
   imports: [
     BrowserModule,

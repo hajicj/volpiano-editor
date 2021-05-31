@@ -1,0 +1,8 @@
+<div *ngFor="let cSyllable of chantWord; let sLast = last;" class="syllable">
+  <app-syllable-view
+    [volpiano]="cSyllable[0]"
+    [text]="cSyllable[1]"
+    [isLastSyllable]="sLast"
+    [isLastSyllableOfLastWord]="sLast && isLastWord">
+  </app-syllable-view>
+</div>

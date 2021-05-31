@@ -22,8 +22,9 @@ export class VolpianoRendererComponent implements OnInit {
   }
 
   get alignedWordsAndSyllables(): Array<Array<[Volpiano, string]>> {
-    return ChantData.alignVolpianoAndTextWordsAndSyllables(
+    const csWords = ChantData.alignVolpianoAndTextWordsAndSyllables(
       this.volpiano, this.text, false);
+    return csWords;
   }
 
 }
