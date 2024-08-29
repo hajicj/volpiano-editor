@@ -4,6 +4,11 @@ textarea {
   font-family: "Courier New", monospace;
 }
 
+.volpianoInputTextArea {
+  font-family: Volpiano, monospace;
+  font-size: 24pt;
+}
+
 .editorLayoutTable {
   width: 80%;
 }

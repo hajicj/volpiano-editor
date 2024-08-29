@@ -15,8 +15,18 @@
         <span style="width: 200px;"><b>Volpiano</b>&nbsp;</span>
       </td>
       <td>
-        <textarea #volpianoInput
+        <textarea #volpianoInput class="volpianoInputTextArea"
           [value]="volpiano.volpianoString" (input)="updateVolpiano()"></textarea>
+      </td>
+    </tr>
+
+    <tr #volpianoRawInputContainer>
+      <td>
+        <span style="width: 200px;"><b>Volpiano Raw</b>&nbsp;</span>
+      </td>
+      <td>
+        <textarea #volpianoRawInput class="volpianoRawInputTextArea"
+                  [value]="volpiano.volpianoString" (input)="updateVolpianoFromRaw()"></textarea>
       </td>
     </tr>
 
