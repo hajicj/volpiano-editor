@@ -1,0 +1,8 @@
+<div class="syllableVolpiano">
+  {{ volpiano.volpianoString }}<ng-container
+    *ngIf="!isLastSyllable">--</ng-container><ng-container
+    *ngIf="isLastSyllable && !isLastSyllableOfLastWord">---</ng-container>
+</div>
+<div class="syllableText">
+  {{ text }}<ng-container *ngIf="!isLastSyllable">-</ng-container>
+</div>

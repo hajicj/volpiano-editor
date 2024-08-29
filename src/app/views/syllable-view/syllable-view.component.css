@@ -1,0 +1,20 @@
+
+.wordVolpiano {
+  font-family: Volpiano, sans-serif;
+  font-size: 32pt;
+  display: inline-block;
+}
+
+.wordText {
+  /*display: inline-block;*/
+}
+
+.syllableVolpiano {
+  font-family: Volpiano, sans-serif;
+  font-size: 32pt;
+  display: inline-block
+}
+
+.syllableText {
+  /*display: inline-block;*/
+}

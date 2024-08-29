@@ -12,9 +12,10 @@ import { Volpiano } from '../data-structures/volpiano';
 export class EditorComponent implements OnInit {
 
   public volpiano: Volpiano = new Volpiano('1---f---g---f--gh-j--j-h');
-  public fulltext: string = 'Ad te cla-ma-vi';
+  public fulltext: string = 'Ad te le-va-vi';
 
   @ViewChild('volpianoInput', {static: false}) volpianoInput: ElementRef;
+  @ViewChild('volpianoRawInput', {static: false}) volpianoRawInput: ElementRef;
   @ViewChild('fulltextInput', {static: false}) fulltextInput: ElementRef;
 
   constructor() { }
@@ -24,6 +25,10 @@ export class EditorComponent implements OnInit {
 
   updateVolpiano() {
     this.volpiano.volpianoString = this.volpianoInput.nativeElement.value;
+  }
+
+  updateVolpianoFromRaw() {
+    this.volpiano.volpianoString = this.volpianoRawInput.nativeElement.value;
   }
 
   updateFulltext() {

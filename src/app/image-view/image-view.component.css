@@ -1,8 +1,9 @@
 div.imageCanvas {
   border: 1px solid darkblue;
   width: 80%;
-  height: 400px;
+  height: 300px;
   overflow: hidden;
+  background-color: whitesmoke;
 }
 
 div.canvasContainer {
@@ -15,4 +16,17 @@ img#image {
 
 input.imageURLinput {
   width: 50%;
+  min-width: 200px;
+  padding: 4px;
+  vertical-align: middle;
+}
+
+.imageControls {
+  vertical-align: middle;
+  padding: 4px 0;
+}
+
+.imageControlsLabel {
+  padding-left: 4px;
+  padding-right: 4px;
 }

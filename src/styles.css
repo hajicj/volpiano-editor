@@ -11,3 +11,33 @@
   src: local("Volpiano2"), url(./assets/fonts/volpiano2.woff);
 }
 
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+html {
+  background-color: antiquewhite;
+}
+
+button {
+  padding: 4px 8px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background-color: whitesmoke;
+}
+
+img.logoHeader {
+  height: 80px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+body {
+  padding-left: 8px;
+}
+
+hr {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
